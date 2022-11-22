@@ -68,9 +68,3 @@ See our CI scripts for details.
 ```sh
 node --check ./action.js
 ```
-
-## Dependencies
-
-|   Project   | Version |
-|-------------|---------|
-| nodejs.org  | ^16     |
