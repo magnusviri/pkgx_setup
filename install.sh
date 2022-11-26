@@ -92,7 +92,9 @@ prepare() {
 		# use existing installation if found
 		if which tea >/dev/null 2>&1; then
 			TEA_PREFIX="$(tea --prefix --silent)"
-			ALREADY_INSTALLED=1
+			if test $? -eq 0 -a -n "$TEA_PREFIX"; then
+				ALREADY_INSTALLED=1
+			fi
 		fi
 
 		# we check again: in case the above failed for some reason
